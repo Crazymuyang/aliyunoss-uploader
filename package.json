@@ -1,0 +1,30 @@
+{
+  "name": "@crazymuyang/aliossyun-uploader",
+  "version": "1.0.0",
+  "description": "aliyunoss-uploader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crazymuyang/aliyunoss-uploader.git"
+  },
+  "keywords": [
+    "ali-oss",
+    "node",
+    "streamfile",
+    "uploader"
+  ],
+  "author": "CrazyMuyang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Crazymuyang/aliyunoss-uploader/issues"
+  },
+  "homepage": "https://github.com/Crazymuyang/aliyunoss-uploader#readme",
+  "devDependencies": {
+    "ali-oss": "^6.1.0",
+    "ftp": "^0.3.10",
+    "single-line-log": "^1.1.2"
+  }
+}
