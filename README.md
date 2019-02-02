@@ -3,7 +3,7 @@
 
 ## 安装
   ```
-  npm install --save-dev aliyunoss-uploader
+  npm install --save-dev @crazymuyang/aliossyun-uploader
   ```
 
 ## 使用
