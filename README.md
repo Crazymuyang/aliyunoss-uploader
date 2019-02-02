@@ -16,7 +16,7 @@
     bucket: 'your bucket',
   };
   const uploadConfig = {
-    dirpath: './test',  // 将该相对路径下的文件上传至oss
+    dirpath: 'F:/myproject/assets',  // 将该路径下的文件上传至oss()
     destpath: '/test',  // 将文件上传至bucket下的该路径下
   }
 
