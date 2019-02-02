@@ -1,5 +1,5 @@
 # aliyunoss uploader
-  > 基于fs & ali-oss，批量上传文件至阿里云oss
+  > 基于fs & ali-oss，批量上传文件(putStream)至阿里云oss
 
 ## 安装
   ```
@@ -8,7 +8,7 @@
 
 ## 使用
   ```
-  const aliOssUploader = require('aliyunoss-uploader');
+  const aliOssUploader = require('@crazymuyang/aliossyun-uploader');
   const aliossConfig = {
     region: 'oss-cn-hangzhou',
     accessKeyId: 'your accessKeyId',
