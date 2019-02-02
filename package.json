@@ -1,7 +1,7 @@
 {
-  "name": "@crazymuyang/aliossyun-uploader",
-  "version": "1.0.3",
-  "description": "aliyunoss-uploader",
+  "name": "@crazymuyang/alioss-uploader",
+  "version": "1.0.2",
+  "description": "alioss-uploader",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

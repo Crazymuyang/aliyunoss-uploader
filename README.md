@@ -3,12 +3,12 @@
 
 ## 安装
   ```
-  npm install --save-dev @crazymuyang/aliossyun-uploader
+  npm install --save-dev @crazymuyang/alioss-uploader
   ```
 
 ## 使用
   ```
-  const aliOssUploader = require('@crazymuyang/aliossyun-uploader');
+  const aliOssUploader = require('@crazymuyang/alioss-uploader');
   const aliossConfig = {
     region: 'oss-cn-hangzhou',
     accessKeyId: 'your accessKeyId',
