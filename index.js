@@ -8,7 +8,7 @@ class aliOssUploader{
    * @param {Object} aliossConfig 
    * @param {Object} uploadConfig 
    * @example { region: 'oss-cn-hangzhou', accessKeyId: 'your keyid', accessKeySecret: 'you keysecret', bucket: 'your bucket',}
-   * @example { dirpath: './test', destpath: 'your destpath belong to the current bucket'}
+   * @example { dirpath: path.resolve(__dirname, './test'), destpath: 'your destpath belong to the current bucket'}
    */
   constructor(aliossConfig, uploadConfig) {
     const OSS = require('ali-oss');
