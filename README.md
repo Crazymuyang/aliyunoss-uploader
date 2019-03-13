@@ -24,3 +24,5 @@
   const uploader = new aliOssUploader(aliossConfig, uploadConfig);
   uploader.start();
   ```
+## 参考
+  - [阿里oss SDK(nodejs)](https://www.alibabacloud.com/help/zh/doc-detail/32068.htm?spm=a2c63.p38356.b99.359.317f42a91QomOW)

@@ -22,9 +22,7 @@ class aliOssUploader{
   start() {
     this.streamFactory(this.dirpath, this.destpath);
     this.streamList.forEach((fileItem, idx) => {
-      this.putStream(fileItem.destPath, fileItem.stream);
-      log(`\x1B[32m--正在上传${idx + 1}/${this.streamAmount}--\x1B[39m`);
-      (idx + 1 === this.streamAmount) && log(`\x1B[32m上传完成，本次共计${this.streamAmount}个文件\x1B[39m`);
+      this.putStream(fileItem.destPath, fileItem.stream, idx);
     });
   }
   /**
@@ -32,9 +30,10 @@ class aliOssUploader{
    * @param {String} filename 上传至oss使用的文件名
    * @param {String} stream 可读的文件流
    */
-  async putStream (filename, stream) {
+  async putStream (filename, stream, idx) {
     try {
       await this.client.putStream(filename, stream);
+      (idx + 1 === this.streamAmount) && log(`\x1B[32m上传完成，本次共计${this.streamAmount}个文件\x1B[39m`);
     } catch (err) {
       throw err;
     }
