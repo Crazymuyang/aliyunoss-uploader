@@ -1,6 +1,6 @@
 {
   "name": "@crazymuyang/alioss-uploader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "alioss-uploader",
   "main": "index.js",
   "scripts": {

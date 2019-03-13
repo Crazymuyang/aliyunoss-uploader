@@ -9,6 +9,7 @@
 ## 使用
   ```
   const aliOssUploader = require('@crazymuyang/alioss-uploader');
+  const path = require('path');
   const aliossConfig = {
     region: 'oss-cn-hangzhou',
     accessKeyId: 'your accessKeyId',
@@ -16,7 +17,7 @@
     bucket: 'your bucket',
   };
   const uploadConfig = {
-    dirpath: 'F:/myproject/assets',  // 将该路径下的文件上传至oss()
+    dirpath: path.resolve(__dirname, './test'),  // 将该路径下的文件上传至oss()
     destpath: '/test',  // 将文件上传至bucket下的该路径下
   }
 

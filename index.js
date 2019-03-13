@@ -13,7 +13,7 @@ class aliOssUploader{
   constructor(aliossConfig, uploadConfig) {
     const OSS = require('ali-oss');
     this.client = new OSS(aliossConfig);
-    this.dirpath = path.resolve(__dirname, uploadConfig.dirpath);
+    this.dirpath = uploadConfig.dirpath;
     this.destpath = uploadConfig.destpath;
     this.streamList = [];
     this.streamAmount = 0;
