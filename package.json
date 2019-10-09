@@ -1,6 +1,6 @@
 {
   "name": "@crazymuyang/alioss-uploader",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "alioss-uploader",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "url": "https://github.com/Crazymuyang/aliyunoss-uploader/issues"
   },
   "homepage": "https://github.com/Crazymuyang/aliyunoss-uploader#readme",
-  "devDependencies": {
+  "dependencies": {
     "ali-oss": "^6.1.0",
     "ftp": "^0.3.10",
     "single-line-log": "^1.1.2"
