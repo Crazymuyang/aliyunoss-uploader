@@ -1,10 +1,13 @@
-import { createReadStream, statSync, readdirSync, } from 'fs';
-import { resolve } from 'path';
-import { createRequire } from 'module';
-import chalk from "chalk";
+'use strict';
 
-const require = createRequire(import.meta.url);
-const log = require('single-line-log').stdout;
+var fs = require('fs');
+var path = require('path');
+var module$1 = require('module');
+var chalk = require('chalk');
+
+var _documentCurrentScript = typeof document !== 'undefined' ? document.currentScript : null;
+const require$1 = module$1.createRequire((typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && _documentCurrentScript.src || new URL('index.cjs.js', document.baseURI).href)));
+const log = require$1('single-line-log').stdout;
 
 class AliOssUploader{
   /**
@@ -15,7 +18,7 @@ class AliOssUploader{
    * @example { dirpath: resolve(__dirname, './test'), destpath: 'your destpath belong to the current bucket'}
    */
   constructor(aliossConfig, uploadConfig) {
-    const OSS = require('ali-oss');
+    const OSS = require$1('ali-oss');
     this.client = new OSS(aliossConfig);
     this.dirpath = uploadConfig.dirpath;
     this.destpath = uploadConfig.destpath;
@@ -52,13 +55,13 @@ class AliOssUploader{
    * @param {String} destPath 上传至服务器的目录位置
    */
   streamFactory(dirpath, destPath) {
-    const files = readdirSync(dirpath);
+    const files = fs.readdirSync(dirpath);
     files.length && files.forEach((filename) => {
-      const filepath = resolve(dirpath, filename);
-      const isDir = statSync(filepath).isDirectory();
-      const isFile = statSync(filepath).isFile();
+      const filepath = path.resolve(dirpath, filename);
+      const isDir = fs.statSync(filepath).isDirectory();
+      const isFile = fs.statSync(filepath).isFile();
       if(isFile) {
-        const stream = createReadStream(filepath);
+        const stream = fs.createReadStream(filepath);
         this.streamList.push({ stream, destPath: `${destPath}/${filename}` });
         this.streamAmount++;
       }else if (isDir) {
@@ -68,4 +71,4 @@ class AliOssUploader{
   }
 }
 
-export default AliOssUploader;
+module.exports = AliOssUploader;

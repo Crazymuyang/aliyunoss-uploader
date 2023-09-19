@@ -1,7 +1,7 @@
-import { createReadStream, statSync, readdirSync, } from 'fs';
+import { readdirSync, statSync, createReadStream } from 'fs';
 import { resolve } from 'path';
 import { createRequire } from 'module';
-import chalk from "chalk";
+import chalk from 'chalk';
 
 const require = createRequire(import.meta.url);
 const log = require('single-line-log').stdout;
@@ -68,4 +68,4 @@ class AliOssUploader{
   }
 }
 
-export default AliOssUploader;
+export { AliOssUploader as default };

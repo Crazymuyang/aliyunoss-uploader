@@ -8,7 +8,7 @@
 
 ## 使用
   ```
-  const aliOssUploader = require('@crazymuyang/alioss-uploader');
+  const AliOssUploader = require('@crazymuyang/alioss-uploader');
   const path = require('path');
   const aliossConfig = {
     region: 'oss-cn-hangzhou',
@@ -21,7 +21,7 @@
     destpath: '/test',  // 将文件上传至bucket下的该路径下
   }
 
-  const uploader = new aliOssUploader(aliossConfig, uploadConfig);
+  const uploader = new AliOssUploader(aliossConfig, uploadConfig);
   uploader.start();
   ```
 ## 参考
